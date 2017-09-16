@@ -41,7 +41,7 @@ int count_one(int n) {
 
 Is power of four (actually map-checking, iterative and recursive methods can do the same)
 
-```
+```c
 bool isPowerOfFour(int n) {
     return !(n&(n-1)) && (n&0x55555555);
     //check the 1-bit location;
@@ -93,7 +93,7 @@ REVERSE BITS
 Reverse bits of a given 32 bits unsigned integer.
 
 Solution
-
+```c
 uint32_t reverseBits(uint32_t n) {
     unsigned int mask = 1<<31, res = 0;
     for(int i = 0; i < 32; ++i) {
@@ -112,23 +112,25 @@ uint32_t reverseBits(uint32_t n) {
 	}
 	return ret;
 }
-& tricks
+```
+`&` tricks
 
 Just selecting certain bits
 
 Reversing the bits in integer
-
+```c
 x = ((x & 0xaaaaaaaa) >> 1) | ((x & 0x55555555) << 1);
 x = ((x & 0xcccccccc) >> 2) | ((x & 0x33333333) << 2);
 x = ((x & 0xf0f0f0f0) >> 4) | ((x & 0x0f0f0f0f) << 4);
 x = ((x & 0xff00ff00) >> 8) | ((x & 0x00ff00ff) << 8);
 x = ((x & 0xffff0000) >> 16) | ((x & 0x0000ffff) << 16);
+```
 BITWISE AND OF NUMBERS RANGE
 
 Given a range [m, n] where 0 <= m <= n <= 2147483647, return the bitwise AND of all numbers in this range, inclusive. For example, given the range [5, 7], you should return 4.
 
 Solution
-
+```c
 int rangeBitwiseAnd(int m, int n) {
     int a = 0;
     while(m != n) {
@@ -138,12 +140,13 @@ int rangeBitwiseAnd(int m, int n) {
     }
     return m<<a; 
 }
+```
 NUMBER OF 1 BITS
 
 Write a function that takes an unsigned integer and returns the number of ’1' bits it has (also known as the Hamming weight).
 
 Solution
-
+```c
 int hammingWeight(uint32_t n) {
 	int count = 0;
 	while(n) {
@@ -161,6 +164,7 @@ int hammingWeight(uint32_t n) {
     }
     return count;
 }
+```
 Application
 
 REPEATED DNA SEQUENCES
@@ -171,7 +175,7 @@ Given s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT",
 Return: ["AAAAACCCCC", "CCCCCAAAAA"].
 
 Solution
-
+```c
 class Solution {
 public:
     vector<string> findRepeatedDnaSequences(string s) {
@@ -188,13 +192,14 @@ public:
         return v;
     }
 };
+```
 But the above solution can be invalid when repeated sequence appears too many times, in which case we should use unordered_map<int, int> keyMap to replace char keyMap[1<<21]{0}here.
 MAJORITY ELEMENT
 
 Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times. (bit-counting as a usual way, but here we actually also can adopt sorting and Moore Voting Algorithm)
 
 Solution
-
+```c
 int majorityElement(vector<int>& nums) {
     int len = sizeof(int)*8, size = nums.size();
     int count = 0, mask = 1, ret = 0;
@@ -207,6 +212,7 @@ int majorityElement(vector<int>& nums) {
     }
     return ret;
 }
+```
 SINGLE NUMBER III
 
 Given an array of integers, every element appears three times except for one. Find that single one. (Still this type can be solved by bit-counting easily.) But we are going to solve it by digital logic design
