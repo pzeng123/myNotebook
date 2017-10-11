@@ -313,7 +313,7 @@ BITSET
 
 A bitset stores bits (elements with only two possible values: 0 or 1, true or false, ...).
 The class emulates an array of bool elements, but optimized for space allocation: generally, each element occupies only one bit (which, on most systems, is eight times less than the smallest elemental type: char).
-
+```c
 // bitset::count
 #include <iostream>       // std::cout
 #include <string>         // std::string
@@ -326,4 +326,5 @@ int main () {
   std::cout << (foo.size()-foo.count()) << " zeros.\n";
   return 0;
 }
+```
 Always welcom new ideas and practical tricks, just leave them in the comments!
