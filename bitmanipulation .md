@@ -218,7 +218,7 @@ SINGLE NUMBER III
 Given an array of integers, every element appears three times except for one. Find that single one. (Still this type can be solved by bit-counting easily.) But we are going to solve it by digital logic design
 
 Solution
-
+```c
 //inspired by logical circuit design and boolean algebra;
 //counter - unit of 3;
 //current   incoming  next
@@ -241,6 +241,8 @@ int singleNumber(vector<int>& nums) {
     }
     return a | b;
 }
+```
+
 ;
 MAXIMUM PRODUCT OF WORD LENGTHS
 
