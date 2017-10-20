@@ -329,4 +329,4 @@ int main () {
   return 0;
 }
 ```
-Always welcom new ideas and practical tricks, just leave them in the comments!
+
