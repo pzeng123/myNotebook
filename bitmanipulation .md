@@ -287,7 +287,7 @@ Attention
 result after shifting left(or right) too much is undefined
 right shifting operations on negative values are undefined
 right operand in shifting should be non-negative, otherwise the result is undefined
-The & and | operators have lower precedence than comparison operators
+The `&` and `|` operators have lower precedence than comparison operators
 SETS
 
 All the subsets
