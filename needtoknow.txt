@@ -1,0 +1,1 @@
+trie, union find, index tree, dfs, bfs, backtracking
