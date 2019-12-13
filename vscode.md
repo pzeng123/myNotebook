@@ -22,7 +22,7 @@ source /etc/bashrc
 After that, vscode ssh to server to edit files on server, but got notification: 
 `Git not found. Install it or configure it using the 'git.path' setting.`
 
-*1. In VS Code -> Preferences -> Settings, add line: 
+* 1. In VS Code -> Preferences -> Settings, add line: 
 ```
 "git.path": "/usr/local/git/bin"
 ```
@@ -32,10 +32,11 @@ or
 ```
 but not working.
 
-*2. reinstall git on server to /usr/bin, the same as local machine, then it works.
+* 2. reinstall git on server to /usr/bin, the same as local machine, then it works.
 ```
 ...
 make prefix=/usr/local/git all
 make prefix=/usr/local/git install
+...
 ```
 
